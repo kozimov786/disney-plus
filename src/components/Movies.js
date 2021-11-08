@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { selectMovie } from '../features/movie/movieSlice';
+import { useSelector } from 'react-redux';
 
 const Movies = () => {
+
+  const movies = useSelector(selectMovie)
+  console.log(movies);
+
   return (
     <MoviesWrapper>
       <h4>Recommended For You</h4>

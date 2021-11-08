@@ -7,27 +7,27 @@ const Header = () => {
     <Container>
       <Logo src="/images/logo.svg" />
       <NavMenu>
-        <a href="#">
+        <a href="blank_html">
           <img src="/images/home-icon.svg" alt="home icon" />
           <span>Home</span>
         </a>
-        <a href="#">
+        <a href="blank_html">
           <img src="/images/search-icon.svg" alt="search icon" />
           <span>Search</span>
         </a>
-        <a href="#">
+        <a href="blank_html">
           <img src="/images/watchlist-icon.svg" alt="watchlist icon" />
           <span>Watchlist</span>
         </a>
-        <a href="#">
+        <a href="blank_html">
           <img src="/images/original-icon.svg" alt="original icon" />
           <span>Originals</span>
         </a>
-        <a href="#">
+        <a href="blank_html">
           <img src="/images/movie-icon.svg" alt="movie icon" />
           <span>movies</span>
         </a>
-        <a href="#">
+        <a href="blank_html">
           <img src="/images/series-icon.svg" alt="series icon" />
           <span>series</span>
         </a>

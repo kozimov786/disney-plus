@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ImgSlider from './HeroSlider';
 import Movies from './Movies';
 import Viewers from './Viewers';
+import db from '../firebase';
+import { useDispatch } from 'react-redux';
+import setMovies from '../features/movie/movieSlice';
+import { collection, getDocs } from 'firebase/firestore/lite';
+
 
 const Home = () => {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    async function getMovies() {
+      db.collection('movies').getDocs()
+      const movieCol = collection(db, 'movie')
+      const snapshot = await getDocs(movieCol)
+      const moviesList = snapshot.docs.map(doc => doc.data())
+      return moviesList
+    }
+    dispatch(setMovies(getMovies()))
+  }, [dispatch])
+
+
   return (
     <Main>
       <Container>
